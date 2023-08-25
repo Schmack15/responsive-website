@@ -1,0 +1,297 @@
+/* 
+Color pallete. This section defines variables for the color pallete,
+so that we can refer to particular colors by name instead of hexadecimal values.
+This is applied to the 'root' psuedo-element, which just means that these color
+variables are available to be used anywhere in our html document
+*/
+:root {
+    --white-font: #FFFFFF;
+    --black-font: #000000;
+	--color1: #D1C6AD;
+	--color2: #BBADA0;
+	--color3: #A1869E;
+	--color4: #797596;
+	--color5: #0B1D51;
+	--color6: #7E5FC0;
+    /* add in other color variables for color pallete */
+}
+
+/* Defines the main container size, we are limiting to 72em max and centring in the viewport */
+.main-container {
+    max-width: 72em;
+    margin: 0 auto;
+    font-family: Inter;
+	color: var(--black-font);
+	   grid-template:
+     "ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
+	 " .   iT  iT  iT  iT  iT  iT  iT  iT  iT  iT  . " minmax(4em, auto)
+     " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+     "b2n b2n b2n b2n b2n b2n b2n b2n b2n b2n b2n b2n" minmax(4em, auto)
+     " .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
+     " .  cTt cTt cTt cTt cTt cTt cTt cTt cTt cTt  . " minmax(2em, auto)
+     " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+     "ce1 ce1 ce1 ce1 ce1 ce1 ce1 c1e c1e c1e c1e c1e" minmax(8em, auto)
+     " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+     "ce2 ce2 ce2 ce2 ce2 ce2 ce2 c2e c2e c2e c2e c2e" minmax(8em, auto)
+	 " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+	 "b3n b3n b3n b3n b3n b3n b3n b3n b3n b3n b3n b3n" minmax(4em, auto)
+	 " .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
+	 " .  stt stt stt stt stt stt stt stt stt stt  . " minmax(2em, auto)
+	 " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+     "se1 se1 se1 se1 se1 se1 se1 s1e s1e s1e s1e s1e" minmax(8em, auto)
+	 " .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+     "se2 se2 se2 se2 se2 se2 se2 s2e s2e s2e s2e s2e" minmax(8em, auto)
+	
+    /* TODO: set the main font color */
+}
+
+/* Here we define the aspects of style of our elements other than their grid layout */
+.intro-text {
+	color: var(--black-font)
+}
+
+.banner2 {
+	background-color: var(--color4);
+	text-align: center;
+}
+
+.banner3 {
+	background-color: var(--color4);
+	text-align: center;
+}
+
+.banner2-title {
+	font-size: 2em;
+	padding-top: 8px;
+}
+
+.banner3-title {
+	font-size: 2em;
+	padding-top: 8px;
+}
+
+.city-text {
+	color: var(--black-font);
+}
+
+.suburb-text {
+	color: var(--black-font);
+}
+
+.city-explain1 {
+	color: var(--black-font);
+	padding-top: 4em;
+
+}
+
+.city-explain2 {
+	color: var(--black-font);
+	padding-top: 4em;
+}
+
+.suburb-explain1 {
+	color: var(--black-font);
+	padding-top: 4em;
+}
+
+.suburb-explain2 {
+	color: var(--black-font);
+	padding-top: 4em;
+}
+
+.city-explain1-image {
+	width: 100%;
+	height: 16em;
+}
+
+.city-explain2-image {
+	width: 100%;
+	height: 16em;
+}
+
+.suburb-explain1-image {
+	width: 100%;
+	height: 16em;
+}
+
+.suburb-explain2-image {
+	width: 100%;
+	height: 16em;
+}
+
+.banner {
+    /* TODO: banner styling */
+	background-color: var(--color6);
+	text-align: center;
+}
+
+.banner-title {
+    /* TODO: banner main title font styling */
+	font-size: 3em;
+	padding-top: 32px;
+}
+
+.banner-subtitle {
+    /* TODO: banner subtitle font styling */
+	font-size: 2.25em;
+	padding-left: 4px;
+	padding-top: 2px;
+}
+
+
+/* now we create names for the grid areas for specific elements */
+
+#introText {
+	grid-area: iT;
+}
+
+#banner2 {
+	grid-area: b2n;
+}
+
+#banner3 {
+	grid-area: b3n
+}
+
+#cityText {
+	grid-area: cTt;
+}
+
+#suburbText {
+	grid-area: stt
+}
+
+#cityExplain1 {
+	grid-area: ce1;
+}
+
+#cityExplain2 {
+	grid-area: ce2;
+}
+
+#suburbExplain1{
+	grid-area: se1;
+}
+
+#suburbExplain2 {
+	grid-area: se2
+}
+
+#cityExplain1Image {
+	grid-area: c1e
+}
+
+#cityExplain2Image {
+	grid-area: c2e
+}
+
+#suburbExplain1Image {
+	grid-area: s1e
+}
+
+#suburbExplain2Image {
+	grid-area: s2e
+}
+
+#banner {
+    /* TODO: give the grid-area a name */
+	grid-area: ban;
+}
+
+
+
+/* Use a flexible layout grid */
+.main-container {
+    display: grid;
+    column-gap: 1em;
+}
+  
+/* 
+Responsive Layout breakpoints. We start 'mobile-first' i.e. we define how the layout should look
+for the smallest screen sizes. In this case we want a single column that spans the main container.
+Because this CSS definition comes first, it will apply by default. Then we override it below with 
+media queries for progressively bigger screen widths
+*/
+.main-container {
+    /* TODO: setup the grid-template for mobile phone layout */
+    grid-template: 
+    "ban ban ban ban" minmax(6em, auto)
+	" iT  iT  iT  iT" minmax(4em, auto)
+    " .   .   .   . " minmax(2em, auto)
+    "b2n b2n b2n b2n" minmax(3em, auto)
+    " .   .   .   . " minmax(2em, auto)
+    "cTt cTt cTt cTt" minmax(1em, auto)
+    " .   .   .   . " minmax(2em, auto)
+    "c1e c1e c1e c1e" minmax(1em, auto)
+    "ce1 ce1 ce1 ce1" minmax(1em, auto)
+    " .   .   .   . " minmax(2em, auto)
+    " .   .   .   . " minmax(2em, auto)
+    "c2e c2e c2e c2e" minmax(1em, auto)
+    "ce2 ce2 ce2 ce2" minmax(1em, auto)
+    " .   .   .   . " minmax(2em, auto)
+    "b3n b3n b3n b3n" minmax(3em, auto)
+	"stt stt stt stt" minmax(1em, auto)
+	" .   .   .   . " minmax(2em, auto)
+	"s1e s1e s1e s1e" minmax(1em, auto)
+	"se1 se1 se1 se1" minmax(1em, auto)
+	" .   .   .   . " minmax(2em, auto)
+	"s2e s2e s2e s2e" minmax(1em, auto)
+	"se2 se2 se2 se2" minmax(1em, auto)
+
+
+}
+
+@media (min-width: 50em) and (max-resolution: 2dppx) {
+    .main-container {
+            /* TODO: setup the grid-template for tablet layout */
+    grid-template: 
+        "ban ban ban ban ban ban ban ban" minmax(8em, auto)
+        " iT  iT  iT  iT  iT  iT  iT  iT" minmax(4em, auto)
+		" .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "b2n b2n b2n b2n b2n b2n b2n b2n" minmax(4em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "cTt cTt cTt cTt cTt cTt cTt cTt" minmax(2em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        " .   .  c1e c1e c1e c1e  .   . " minmax(1em, auto)
+        "ce1 ce1 ce1 ce1 ce1 ce1 ce1 ce1" minmax(1em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+	    " .   .  c2e c2e c2e c2e  .   . " minmax(1em, auto)
+        "ce2 ce2 ce2 ce2 ce2 ce2 ce2 ce2" minmax(1em, auto)
+		" .   .   .   .   .   .   .   . " minmax(2em, auto)
+		"b3n b3n b3n b3n b3n b3n b3n b3n" minmax(4em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+        "stt stt stt stt stt stt stt stt" minmax(2em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+	    " .   .  s1e s1e s1e s1e  .   . " minmax(1em, auto)
+        "se1 se1 se1 se1 se1 se1 se1 se1" minmax(1em, auto)
+        " .   .   .   .   .   .   .   . " minmax(2em, auto)
+	    " .   .  s2e s2e s2e s2e  .   . " minmax(1em, auto)
+        "se2 se2 se2 se2 se2 se2 se2 se2" minmax(1em, auto)	
+    }
+}
+
+@media (min-width: 75em) and (max-resolution: 2dppx) {
+    .main-container {
+        /* TODO: setup the grid-template for desktop layout */
+		grid-template:
+		"ban ban ban ban ban ban ban ban ban ban ban ban" minmax(8em, auto)
+		" .   iT  iT  iT  iT  iT  iT  iT  iT  iT  iT  . " minmax(4em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+		"b2n b2n b2n b2n b2n b2n b2n b2n b2n b2n b2n b2n" minmax(4em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
+		" .  cTt cTt cTt cTt cTt cTt cTt cTt cTt cTt  . " minmax(2em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+		"ce1 ce1 ce1 ce1 ce1 ce1 ce1 c1e c1e c1e c1e c1e" minmax(8em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+		"ce2 ce2 ce2 ce2 ce2 ce2 ce2 c2e c2e c2e c2e c2e" minmax(8em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+		"b3n b3n b3n b3n b3n b3n b3n b3n b3n b3n b3n b3n" minmax(4em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(1em, auto)
+		" .  stt stt stt stt stt stt stt stt stt stt  . " minmax(2em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+		"se1 se1 se1 se1 se1 se1 se1 s1e s1e s1e s1e s1e" minmax(8em, auto)
+		" .   .   .   .   .   .   .   .   .   .   .   . " minmax(2em, auto)
+		"se2 se2 se2 se2 se2 se2 se2 s2e s2e s2e s2e s2e" minmax(8em, auto)
+    }
+}
+
